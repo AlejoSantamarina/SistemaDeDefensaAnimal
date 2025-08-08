@@ -10,6 +10,6 @@ public class Oficina {
 
     public void agregar(Animal a) {
         animales.add(a);
-        Collections.sort(animales, new ComparadorEnergia());
+        Collections.sort(animales, new ComparadorDoble(new ComparadorCantHabilidades(), new ComparadorDoble(new ComparadorEnergia(), new ComparadorNombre)));
     }
 }
